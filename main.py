@@ -45,6 +45,7 @@ count_png = 0
 count_gif = 0
 count_mov = 0
 count_mp4 = 0
+count_heic = 0
 count_others = 0
 
 
@@ -55,9 +56,10 @@ def tally(ext):
     global count_gif
     global count_mov
     global count_mp4
+    global count_heic
     global count_others
 
-    if ext.lower() == ".jpg":
+    if ext.lower() == ".jpg" or ext.lower() == ".jpeg":
         count_jpeg += 1
     elif ext.lower() == ".png":
         count_png += 1
@@ -67,6 +69,8 @@ def tally(ext):
         count_mov += 1
     elif ext.lower() == ".mp4":
         count_mp4 += 1
+    elif ext.lower() == ".heic":
+        count_heic += 1
     else:
         count_others += 1
 
@@ -144,6 +148,7 @@ print("MP4 files:", count_mp4)
 print("GIF files:", count_gif)
 print("JPEG files:", count_jpeg)
 print("PNG files:", count_png)
+print("HEIC files:", count_heic)
 print("Other files:", count_others)
 print(
     "\nTotal media:",
@@ -153,5 +158,6 @@ print(
     + count_jpeg
     + count_gif
     + count_mp4
-    + count_mov,
+    + count_mov
+    + count_heic,
 )
