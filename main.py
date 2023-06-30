@@ -71,6 +71,8 @@ def tally(ext):
         count_mp4 += 1
     elif ext.lower() == ".heic":
         count_heic += 1
+    elif ex.lower() == ".json":
+        0
     else:
         count_others += 1
 
