@@ -1,3 +1,7 @@
 .vscode
 .DS_store
 test.py
+~$*
+venv
+.ipynb_checkpoints
+delete*
